@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get :new_restaurant, to: 'restaurants#new', path: 'ccc'
 
   post '/restaurant_list', to: 'restaurants#list'
+
 end
 
   # get '/hello', to: 'a#b'
