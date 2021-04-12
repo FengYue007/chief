@@ -1,5 +1,12 @@
 <h1>餐廳列表</h1>
 
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li></li>
+<%end%>
+</ul>
+
+
 <!-- <a href="/new_restaurant">新增餐廳</a> -->
 <!-- 原本html寫法 -->
 
@@ -12,6 +19,14 @@
 
 <!-- <%= link_to('新增餐廳', new_restaurant_path) if 有登入 %> -->
 <%= link_to '新增餐廳', new_restaurant_path %>
+<%= link_to '編輯' , edit_restaurant_path(restaurant_path) %>
+<% link_to '刪除' , restaurant_path(restaurant),
+                   method: delete,
+                   data: { confirm: '確定嗎？'%>
+<% link_to '刪除' , restaurant_path(restaurant), 'date-method': 'delete' ： ： 'data-confirm': '確定嗎？' %>
+<!-- <a href="/restaurants/2" data-confirm="要看嗎？">這裡</a> -->
+<!-- <a href="/restaurants/2" data-delete='delete' data-confirm="要抽iphone嗎？？">抽iphone 按這裡</a>-->
+<% link_to '刪除' , restaurant_path(restaurant), method: 'delete'  %>
 <!-- # view helper 視圖助手 -->
 
 

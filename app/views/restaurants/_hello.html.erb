@@ -1,0 +1,64 @@
+<%= form_for(restaurant) do |f| %>
+
+  <% if restaurant.errors.any? %>
+    <ul>
+      <% restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: '請輸入名稱' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tel %>
+    <%= f.text_field :tel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+<!-- <form action="/restaurant_list" method="post">
+  <input type="hidden"
+         name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <label for="title">title</label>
+  <input type="text" name="title" id="title">
+  <br />
+
+  <label for="address">address</label>
+  <input type="text" name="address" id="address">
+  <br />
+
+  <label for="tel">tel</label>
+  <input type="tel" name="tel" id="tel">
+  <br />
+
+  <label for="email">email</label>
+  <input type="email" name="email" id="email">
+  <br />
+
+  <label for="description">description</label>
+  <textarea name="description"></textarea>
+  <br />
+
+  <input type="submit" value="新增">
+
+</form> -->
